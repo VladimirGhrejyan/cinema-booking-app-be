@@ -8,7 +8,7 @@ export const getOrmConfig = (): TypeOrmModuleOptions => ({
   username: process.env.POSTGRES_USERNAME,
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
-  entities: [__dirname + '/../orm/entities/**/*.entity{.ts}'],
+  entities: [__dirname + '/../orm/entities/**/*.entity{.ts,.js}'],
   namingStrategy: new SnakeNamingStrategy(),
   synchronize: true,
   autoLoadEntities: true,

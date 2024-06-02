@@ -10,15 +10,18 @@ export class ScheduleSeat {
   @Column({ type: 'boolean', default: false })
   isBooked: boolean;
 
+  @Column({ type: 'integer' })
+  number: number;
+
   @Column()
   scheduleId: number;
 
   @Column()
   seatId: number;
 
-  @ManyToOne(() => Schedule, (schedule) => schedule.scheduleSeats)
+  @ManyToOne(() => Schedule, (schedule) => schedule.scheduleSeats, { onDelete: 'CASCADE' })
   schedule: Schedule;
 
-  @ManyToOne(() => Seat, (seat) => seat.scheduleSeats)
+  @ManyToOne(() => Seat, (seat) => seat.scheduleSeats, { onDelete: 'CASCADE' })
   seat: Seat;
 }

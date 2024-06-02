@@ -8,17 +8,14 @@ export class Seat {
   id: number;
 
   @Column({ type: 'integer' })
-  row: number;
-
-  @Column({ type: 'integer' })
-  column: number;
+  number: number;
 
   @Column()
   roomId: number;
 
-  @ManyToOne(() => Room, (room) => room.seats)
+  @ManyToOne(() => Room, (room) => room.seats, { onDelete: 'CASCADE' })
   room: Room;
 
-  @OneToMany(() => ScheduleSeat, (scheduleSeat) => scheduleSeat.seat)
+  @OneToMany(() => ScheduleSeat, (scheduleSeat) => scheduleSeat.seat, { cascade: true })
   scheduleSeats: ScheduleSeat[];
 }

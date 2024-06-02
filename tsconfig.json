@@ -23,6 +23,7 @@
       "~config/*": ["src/config/*"],
       "~pipes/*": ["src/pipes/*"],
       "~exceptions/*": ["src/exceptions/*"],
+      "~common/*": ["src/common/*"]
     }
   }
 }
