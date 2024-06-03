@@ -26,6 +26,21 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Node v20.10.0
+## pnpm v9.1.4
+
+## .env example
+```bash
+PORT=5000
+POSTGRES_HOST=localhost
+POSTGRES_USERNAME=postgres
+POSTGRES_PASSWORD=root
+POSTGRES_PORT=5432
+POSTGRES_DB=cinema-booking
+APP_URL=http://localhost:5000/
+```
+## Requires an empty DB on the local machine, schemas are automatically created after the app is launched
+
 ## Installation
 
 ```bash
@@ -36,37 +51,20 @@ $ pnpm install
 
 ```bash
 # development
-$ pnpm run start
+$ pnpm start
 
 # watch mode
-$ pnpm run start:dev
+$ pnpm start:dev
 
 # production mode
-$ pnpm run start:prod
+$ pnpm start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ pnpm run test
-
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
-```
+## After running the app, a swagger schema will be generated in the static folder, and endpoints are generated using the schema on the client
 
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
